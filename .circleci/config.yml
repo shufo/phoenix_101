@@ -58,7 +58,6 @@ jobs:
           root: ~/repo
           paths:
             - _build
-            - swagger.json
 
   compile_assets:
     <<: *defaults
