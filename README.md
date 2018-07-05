@@ -21,6 +21,7 @@ cd assets && npm install && node node_modules/brunch/bin/brunch build
 
 ```
 mix ecto.create
+mix ecto.migrate
 ```
 
 - run up the server
