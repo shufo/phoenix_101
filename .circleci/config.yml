@@ -145,6 +145,5 @@ workflows:
              - build_dependencies
       - test:
            requires:
-             - check_formatted
              - build_dependencies
              - compile_assets
