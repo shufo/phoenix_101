@@ -139,7 +139,7 @@ workflows:
       - checkout_code
       - build_dependencies:
            requires:
-             - check_formatted
+             - checkout_code
       - compile_assets:
            requires:
              - build_dependencies
