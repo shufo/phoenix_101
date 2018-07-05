@@ -14,16 +14,6 @@ jobs:
           paths:
             - ~/repo
 
-  check_formatted:
-    working_directory: ~/repo
-    docker:
-      - image: shufo/phoenix:1.6.3
-    steps:
-      - restore_cache:
-          key: "{{ .Environment.CACHE_VERSION }}-repo-{{ .Environment.CIRCLE_SHA1 }}"
-      - run: mix format --check-formatted
-
-
   build_dependencies:
     <<: *defaults
     steps:
