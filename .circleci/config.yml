@@ -54,11 +54,6 @@ jobs:
           key: "{{ .Environment.CACHE_VERSION }}-build-cache"
           paths: "_build"
 
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - _build
-
   compile_assets:
     <<: *defaults
     steps:
@@ -93,10 +88,6 @@ jobs:
           key: "{{ .Environment.CACHE_VERSION }}-assets-cache-{{ checksum \"priv/static/cache_manifest.json\" }}"
           paths:
             - priv/static
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - priv/static/cache_manifest.json
 
   test:
     docker:
@@ -125,11 +116,6 @@ jobs:
       - restore_cache:
           key: "{{ .Environment.CACHE_VERSION }}-assets-cache-{{ checksum \"priv/static/cache_manifest.json\" }}"
       - run: MIX_ENV=test mix test
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - _build
-
 
 workflows:
   version: 2
