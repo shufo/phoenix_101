@@ -20,7 +20,7 @@ defmodule Phoenix101.Mixfile do
   def application do
     [
       mod: {Phoenix101.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :comeonin]
     ]
   end
 
@@ -43,6 +43,7 @@ defmodule Phoenix101.Mixfile do
       {:cowboy, "~> 1.0"},
       {:mariaex, ">= 0.0.0"},
       {:floki, "~> 0.20.0"},
+      {:comeonin, "~> 1.2"},
       {:faker, ">= 0.0.0"}
     ]
   end

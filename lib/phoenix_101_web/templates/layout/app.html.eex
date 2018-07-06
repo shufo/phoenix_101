@@ -14,11 +14,9 @@
   <body>
     <div class="container">
       <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
+        <ul class="nav nav-pills pull-right">
+          <li><%= link "ログイン", to: auth_path(@conn, :index) %></li>
+        </ul>
         <span class="logo"></span>
       </header>
 

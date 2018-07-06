@@ -1,4 +1,4 @@
 defmodule Phoenix101Web.LayoutView do
   use Phoenix101Web, :view
-  import Plug.Conn
+  #import Plug.Conn
 end
