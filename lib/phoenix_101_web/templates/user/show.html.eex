@@ -1,0 +1,13 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <%= render "user.html", user: @user, conn: @conn %>
+      <%= link "Edit", to: user_path(@conn, :edit, @user), class: "btn btn-default btn-xs" %>
+      <%= button "Delete", to: user_path(@conn, :delete, @user),
+      method: :delete,
+      onclick: "return confirm(\"本当に削除しますか?\");",
+      class: "btn btn-danger btn-xs" %>
+      <%= link "Back", to: user_path(@conn, :index), class: "btn btn-default btn-xs"%>
+    </section>
+  </aside>
+ </div>

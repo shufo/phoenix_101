@@ -21,6 +21,7 @@ defmodule Phoenix101Web.Router do
 
     resources("/users", UserController)
     resources("/posts", PostController)
+    get("/auth/login", AuthController, :index)
   end
 
   # Other scopes may use custom stacks.
