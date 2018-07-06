@@ -17,10 +17,13 @@ defmodule Phoenix101Web.Router do
     # Use the default browser stack
     pipe_through(:browser)
 
-    get("/", PageController, :index)
-
     resources("/users", UserController)
     resources("/posts", PostController)
+
+    get("/auth/login", AuthController, :index)
+    post("/auth/login", AuthController, :create)
+    get("/pages/index", PageController, :index)
+    get("/", PageController, :index)
   end
 
   # Other scopes may use custom stacks.
