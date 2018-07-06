@@ -1,5 +1,5 @@
 <h2>Listing Posts</h2>
-
+#個別記事ページのテンプレート
 <table class="table">
   <thead>
     <tr>

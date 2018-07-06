@@ -1,5 +1,7 @@
-defmodule Phoenix101Web.UserView do
+defmodule Phoenix101Web.LogInView do
   use Phoenix101Web, :view
+
+
 
 #  def title()assigns) do
 

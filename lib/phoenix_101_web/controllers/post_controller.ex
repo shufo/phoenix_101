@@ -36,11 +36,12 @@ defmodule Phoenix101Web.PostController do
     render(conn, "edit.html", post: post, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "post" => post_params}) do
+  def update(conn, %{"id" => id, "post" => post_params,}) do
     post = Blogs.get_post!(id)
 
     case Blogs.update_post(post, post_params) do
       {:ok, post} ->
+
         conn
         |> put_flash(:info, "Post updated successfully.")
         |> redirect(to: post_path(conn, :show, post))
