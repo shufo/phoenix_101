@@ -74,7 +74,7 @@ jobs:
             - "{{ .Environment.CACHE_VERSION }}-assets-cache"
 
       - run:
-          command: |
+          command:
             (cd assets && yarn install)
             (cd assets && ./node_modules/brunch/bin/brunch build --production)
             mkdir -p priv/static && MIX_ENV=test mix phx.digest
